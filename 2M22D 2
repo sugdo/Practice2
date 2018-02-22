@@ -1,0 +1,42 @@
+#pragma warning (disable:4996)
+#include <stdio.h>
+
+
+
+
+int main()
+{
+
+	int arr[5][5] = { 0 };
+	int i, j;
+
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			scanf("%d", &arr[i][j]);
+			arr[i][4] += arr[i][j];
+			arr[4][j] += arr[i][j];
+		}
+		arr[4][4] += arr[i][4];
+		
+	}
+
+	
+
+	for (i = 0; i < 5; i++)
+	{
+		for (j = 0; j < 5; j++)
+		{
+			printf("%4d", arr[i][j]);
+		}
+		printf("\n");
+
+	}
+
+
+
+
+
+}
+
