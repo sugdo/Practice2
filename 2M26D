@@ -1,0 +1,29 @@
+#pragma warning (disable:4996)
+#include <stdio.h>
+#include <string.h>
+
+int ch_invert(char ch)
+{
+	static int dif = 1 - '1';
+	return ch + dif;
+
+}
+
+
+
+
+int main()
+{
+	char str[50];
+	int i,sum=0;
+
+	gets(str);
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] >= '0' && str[i] <= '9')
+			sum += ch_invert(str[i]);
+	}
+	printf("%d\n", sum);
+ 
+}
